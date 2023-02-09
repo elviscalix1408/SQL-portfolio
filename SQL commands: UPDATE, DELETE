@@ -1,0 +1,30 @@
+CREATE table documents (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT,
+    content TEXT,
+    author TEXT);
+    
+INSERT INTO documents (author, title, content)
+    VALUES ("Puff T.M. Dragon", "Fancy Stuff", "Ceiling wax, dragon wings, etc.");
+INSERT INTO documents (author, title, content)
+    VALUES ("Puff T.M. Dragon", "Living Things", "They're located in the left ear, you know.");
+INSERT INTO documents (author, title, content)
+    VALUES ("Jackie Paper", "Pirate Recipes", "Cherry pie, apple pie, blueberry pie.");
+INSERT INTO documents (author, title, content)
+    VALUES ("Jackie Paper", "Boat Supplies", "Rudder - guitar. Main mast - bed post.");
+INSERT INTO documents (author, title, content)
+    VALUES ("Jackie Paper", "Things I'm Afraid Of", "Talking to my parents, the sea, giant pirates, heights.");
+
+SELECT * FROM documents;
+
+/* Executing UPDATE command to change any instance of "Jackie Paper" to "Jackie Draper", SET tells the system to SET something as something else, WHERE locates what needs to be replaced, in this case any instance of "Jackie Paper" would need to be replaced */
+UPDATE documents SET author = "Jackie Draper" WHERE author = "Jackie Paper";
+
+/* I run the SELECT command again to ensure the table updated with what was changed in this instance, the name "Jackie Paper" is now replaced by "Jackie Draper" */
+SELECT * FROM documents;
+
+
+/* I am now going to execute the "DELETE" command to delete any instance of the title "Things I'm Afraid of" in the title column, then rerun the SELECT command to confirm */
+DELETE FROM documents WHERE title = "Things I'm Afraid Of";
+
+SELECT * FROM documents;
