@@ -1,0 +1,35 @@
+CREATE TABLE clothes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    type TEXT,
+    design TEXT);
+    
+INSERT INTO clothes (type, design)
+    VALUES ("dress", "pink polka dots");
+INSERT INTO clothes (type, design)
+    VALUES ("pants", "rainbow tie-dye");
+INSERT INTO clothes (type, design)
+    VALUES ("blazer", "black sequin");
+
+    
+    
+
+/* Instructions were to add a price cloumn to clothes table by using the ALTER command, as shown below */
+ALTER TABLE clothes ADD price INTEGER;
+
+SELECT * FROM clothes;
+
+/* performed an update and set a price to each table item with the UPDATE command, as shown below */
+
+UPDATE clothes SET price = 10 WHERE id = 1;
+UPDATE clothes SET price = 20 WHERE id = 2;
+UPDATE clothes SET price = 30 WHERE id = 3;
+
+SELECT * FROM clothes;
+
+
+/* next I was instructed to add a new product with the price column, using the INSERT command */
+
+INSERT INTO clothes (type, design, price)
+VALUES ("natural deoderant", "baking soda free", 24);
+
+SELECT * FROM clothes
