@@ -1,0 +1,22 @@
+CREATE TABLE artist (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, rating INTEGER, relevant TEXT);
+
+INSERT INTO artist VALUES (1, "Sam Smith", 18, 10, "Yes");
+INSERT INTO artist VALUES (2, "SZA", 13, 7.5, "Yes");
+INSERT INTO artist VALUES (3, "Bruno Mars", 14, 9, "Yes");
+INSERT INTO artist VALUES (4, "Beyonce", 14, 9, "Yes");
+INSERT INTO artist VALUES (5, "Sean Paul", 14, 8.5, "IDK");
+INSERT INTO artist VALUES (6, "Khalid", 12.5, 14, "Classic");
+INSERT INTO artist VALUES (7, "Adele", 13, 15, "Classic");
+INSERT INTO artist VALUES (8, "Nicki Minaj", 12.5, 14, "YES");
+INSERT INTO artist VALUES (9, "Selena", 16, 20, "TIMELESS");
+INSERT INTO artist VALUES (10, "Coldplay", 14.9, 17, "Classic");
+INSERT INTO artist VALUES (11, "Demi Lovato", 12, 12, "Power");
+INSERT INTO artist VALUES (12, "Kendrick", 18, 17, "Power");
+INSERT INTO artist VALUES (13, "Nono", 20, 20, "Classic");
+INSERT INTO artist VALUES (14, "Marc Anthony", 8, 12, "YES");
+INSERT INTO artist VALUES (15, "Luis Fonsi", 11, 16, "Classic");
+
+/* Here I was asked to CREATE a table with my favorite artists with my own values, I then inserted what the values were and ORDERED BY price as requested
+by the assignment */
+
+SELECT * FROM artist WHERE price > 12 ORDER BY price
