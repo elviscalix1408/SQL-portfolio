@@ -1,2 +1,2 @@
 # SQL-portfolio
-SQL portfolio: projects and completed assignment
+SQL portfolio: Khan academy SQL introduction course assignments completed
